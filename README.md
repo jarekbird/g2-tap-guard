@@ -12,14 +12,14 @@ timers and does not touch the Even Hub SDK: you tell it when a scroll happened a
 
 ## Install
 
-No registry release yet; install from GitHub, pinned to a tag:
+No registry release yet. Install the release tarball, which needs no git, SSH key or build step:
 
 ```sh
-npm install git+https://github.com/jarekbird/g2-tap-guard.git#v0.1.0
+npm install https://github.com/jarekbird/g2-tap-guard/releases/download/v0.1.0/g2-tap-guard-0.1.0.tgz
 ```
 
-Use the `git+https` form rather than `github:`: npm records `github:` in the lockfile as an SSH URL, which a CI runner
-without an SSH key cannot fetch.
+The lockfile then pins its integrity hash. Avoid `github:jarekbird/g2-tap-guard`: npm records it in the lockfile as
+an SSH URL, which a CI runner without an SSH key cannot fetch.
 
 ## Use
 
