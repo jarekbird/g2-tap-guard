@@ -1,0 +1,27 @@
+{
+  "name": "g2-tap-guard",
+  "version": "0.1.0",
+  "description": "Ignore the stray tap that Even G2 glasses can report in the middle of a scroll.",
+  "license": "MIT",
+  "author": "jarekbird",
+  "repository": { "type": "git", "url": "git+https://github.com/jarekbird/g2-tap-guard.git" },
+  "keywords": ["even-realities", "even-g2", "smart-glasses", "touch", "debounce"],
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "check": "tsc --noEmit && vitest run && npm run build && git diff --exit-code -- dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vitest": "^3.2.7"
+  }
+}
